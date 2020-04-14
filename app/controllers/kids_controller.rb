@@ -1,5 +1,5 @@
 class KidsController < ApplicationController
-  before_action :set_kid, only: [:edit, :update]
+  before_action :set_kid, only: [:edit, :update, :destroy]
 
   def new
     @kid = current_user.kids.new
