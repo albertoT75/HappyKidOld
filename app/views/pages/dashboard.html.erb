@@ -12,15 +12,7 @@
         </tr>
       </thead>
       <tbody class="dashboard-table">
-        <% @kids.each do |kid| %>
-          <% if kid.games.exists? %>
-            <tr>
-              <td class="table-dashboard">
-                <%= kid.name  %>
-              </td>
-            </tr>
-          <% end %>
-        <% end %>
+        <!-- to do show kid games -->
       </tbody>
     </table>
   </div>
@@ -49,4 +41,4 @@
 
   </div>
 </div>
-<%= render "shared/footer", kindergarden: @kindergarden %>
+<%= render "shared/footer", game: @game %>

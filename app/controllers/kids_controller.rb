@@ -3,12 +3,12 @@ class KidsController < ApplicationController
 
   def new
     @kid = current_user.kids.new
-    authorize @kid
+    # authorize @kid
   end
 
   def create
     @kid = current_user.kids.new(kid_params)
-    authorize @kid
+    # authorize @kid
     if @kid.save
       flash[:notice] = 'A new kid has been created and added to your profile!'
       redirect_to dashboard_path(current_user)
@@ -19,18 +19,18 @@ class KidsController < ApplicationController
   end
 
   def destroy
-    authorize @kid
+    # authorize @kid
     @kid.delete
     flash[:notice] = 'Your kid profile has been deleted!'
     redirect_to root_path
   end
 
   def edit
-    authorize @kid
+    # authorize @kid
   end
 
   def update
-    authorize @kid
+    # authorize @kid
     if @kid.update(kid_params)
       flash[:success] = "Your kid's profile has been updated!"
       redirect_to dashboard_path(current_user)
