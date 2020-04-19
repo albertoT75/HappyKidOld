@@ -1,11 +1,6 @@
 class CreateKids < ActiveRecord::Migration[5.2]
   def change
-    create_table :kids do |t|
-      t.string :name
-      t.references :user, foreign_key: true
 
-      t.timestamps
-    end
 
     create_table :area do |t|
       t.string :sleeping
@@ -32,7 +27,10 @@ class CreateKids < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
+    create_table :game do |t|
+      t.string :kidname
 
-
+      t.timestamps
+    end
   end
 end
