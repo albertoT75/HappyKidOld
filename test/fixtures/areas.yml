@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sleeping: MyString
+  potty: MyString
+  eating: MyString
+  dressing_up: MyString
+  home_work: MyString
+
+two:
+  sleeping: MyString
+  potty: MyString
+  eating: MyString
+  dressing_up: MyString
+  home_work: MyString
