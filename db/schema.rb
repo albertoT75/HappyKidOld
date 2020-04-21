@@ -10,50 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_17_104900) do
+ActiveRecord::Schema.define(version: 2020_04_10_082038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "area", force: :cascade do |t|
-    t.string "sleeping"
-    t.string "potty"
-    t.string "eating"
-    t.string "dressing_up"
-    t.string "home_work"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "customize", force: :cascade do |t|
-    t.string "face"
-    t.string "hair"
-    t.string "clothes"
-    t.string "hats"
-    t.string "gadgets"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "games", force: :cascade do |t|
-    t.bigint "kid_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["kid_id"], name: "index_games_on_kid_id"
-  end
-
-  create_table "kids", force: :cascade do |t|
-    t.string "name"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_kids_on_user_id"
-  end
-
-  create_table "reward", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -67,6 +27,4 @@ ActiveRecord::Schema.define(version: 2020_04_17_104900) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "games", "kids"
-  add_foreign_key "kids", "users"
 end

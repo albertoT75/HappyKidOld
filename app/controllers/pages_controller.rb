@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @kids = current_user.kids
-    # to do : add games
+    @games = current_user.games
+
   end
 end
