@@ -29,6 +29,7 @@ class CreateKids < ActiveRecord::Migration[5.2]
 
     create_table :game do |t|
       t.string :kidname
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

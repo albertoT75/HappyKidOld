@@ -1,3 +1,3 @@
 class Game < ApplicationRecord
- # to do dependency
+ belongs_to :user
 end
