@@ -10,41 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_10_084127) do
+ActiveRecord::Schema.define(version: 2020_04_10_082038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "area", force: :cascade do |t|
-    t.string "sleeping"
-    t.string "potty"
-    t.string "eating"
-    t.string "dressing_up"
-    t.string "home_work"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "customize", force: :cascade do |t|
-    t.string "face"
-    t.string "hair"
-    t.string "clothes"
-    t.string "hats"
-    t.string "gadgets"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "game", force: :cascade do |t|
-    t.string "kidname"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "reward", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
